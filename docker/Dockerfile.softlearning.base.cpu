@@ -77,7 +77,7 @@ RUN apt-get update -y \
         wget \
         xpra \
         xserver-xorg-dev \
-        xvfb \
+        xvfb
 
 
 # ========= MuJoCo ===============
