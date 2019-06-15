@@ -6,12 +6,13 @@
 #     build \
 #         --build-arg MJKEY="$(cat ~/.mujoco/mjkey.txt)"
 
-version: "2.4"
+version: "2.2"
 services:
   softlearning-dev-cpu:
     image: ${IMAGE_NAME:-softlearning}:${IMAGE_TAG:-latest}-cpu
     container_name: softlearning-dev-cpu
     build:
+      network: host
       context: ../.
       dockerfile: docker/Dockerfile.softlearning.base.cpu
       cache_from:
